@@ -31,6 +31,7 @@ public class UserDataExtractFilter extends OncePerRequestFilter {
             String token = authHeader.substring(BEARER_PREFIX.length());
             String userId = jwtDataExtractor.extractUserId(token);
             requestContext.setUserId(userId);
+            requestContext.setJwt(token);
         }
 
         filterChain.doFilter(request, response);

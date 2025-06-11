@@ -11,4 +11,5 @@ import org.springframework.web.context.annotation.RequestScope;
 @Setter
 public class RequestContext {
     private String userId;
+    private String jwt;
 }
