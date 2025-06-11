@@ -1,11 +1,10 @@
-package com.evelateresume.preview_resume_service.service;
+package com.evelateresume.preview_resume_service.service.impl;
 
 import com.evelateresume.preview_resume_service.client.ResumeServiceClient;
-import com.evelateresume.preview_resume_service.dto.ResumeDTO;
-import com.evelateresume.preview_resume_service.entity.Resume;
+import com.evelateresume.preview_resume_service.model.ResumeDTO;
+import com.evelateresume.preview_resume_service.service.PreviewResumeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import reactor.core.publisher.Mono;
 
 @Service
 @RequiredArgsConstructor
@@ -15,7 +14,7 @@ public class PreviewResumeServiceImpl implements PreviewResumeService {
 
     @Override
     public ResumeDTO improveResume() {
-        Resume resume = resumeServiceClient.fetchUserResume("userId").block();
+        ResumeDTO resume = resumeServiceClient.fetchUserResume().block();
         // send to resume processor to improve resume
         // store in cache in Redis
         // return improved resume
