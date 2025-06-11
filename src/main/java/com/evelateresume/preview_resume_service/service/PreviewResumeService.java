@@ -1,6 +1,6 @@
 package com.evelateresume.preview_resume_service.service;
 
-import com.evelateresume.preview_resume_service.dto.ResumeDTO;
+import com.evelateresume.preview_resume_service.model.ResumeDTO;
 
 public interface PreviewResumeService {
 
