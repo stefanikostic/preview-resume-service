@@ -1,4 +1,4 @@
-package com.evelateresume.preview_resume_service.entity;
+package com.evelateresume.preview_resume_service.model;
 
 public enum ResumeTemplate {
     ORIGINAL,
